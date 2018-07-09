@@ -67,7 +67,7 @@ class EngineShortcode
 			array(
 				'name' => __($name, 'uph_text_domain'),
 				'description' => __($description, 'uph_text_domain'),
-				'category' => 'Content',
+				'category' => SHORTCODE_CATEGORY,
 				'base' => $base,
 				'content_element' => true,
 				'params' => $params
@@ -97,7 +97,7 @@ class EngineShortcode
 		$atts = vc_map_get_attributes( 'sc_1', $atts );
 		extract( $atts );
 		ob_start();
-
+			echo $foo;
 		$out = ob_get_contents();
 		if( ob_get_contents() ) ob_end_clean();
 		return $out;
